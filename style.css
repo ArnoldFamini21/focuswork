@@ -582,6 +582,83 @@ p {
   color: var(--clr-primary-dark);
 }
 
+/* ---------- Our Story ---------- */
+.story-content {
+  max-width: 760px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.story-content p {
+  font-size: var(--fs-lg);
+  line-height: 1.85;
+  color: var(--clr-muted);
+}
+
+.story-lead {
+  font-size: var(--fs-xl) !important;
+  font-weight: 600;
+  color: var(--clr-primary-dark) !important;
+}
+
+.story-values {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-sm);
+  justify-content: center;
+  margin: var(--sp-lg) 0 var(--sp-xl);
+}
+
+/* ---------- Who We Help ---------- */
+.who-list {
+  max-width: 800px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.who-item {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--sp-md);
+  padding: var(--sp-md) var(--sp-lg);
+  border-radius: var(--radius-sm);
+  transition: all 0.3s var(--ease-out);
+  border-bottom: 1px solid rgba(212, 228, 216, 0.5);
+}
+
+.who-item:last-child {
+  border-bottom: none;
+}
+
+.who-item:hover {
+  background: rgba(232, 240, 232, 0.4);
+  transform: translateX(4px);
+}
+
+.who-item__icon {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  background: rgba(58, 125, 92, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.who-item__icon svg {
+  width: 14px;
+  height: 14px;
+  stroke: var(--clr-green-check);
+  stroke-width: 2.5;
+}
+
+.who-item__text {
+  font-size: var(--fs-base);
+  line-height: 1.65;
+}
+
 /* ---------- Coaching Helps ---------- */
 .coaching-helps {
   padding: var(--sp-4xl) 0;
