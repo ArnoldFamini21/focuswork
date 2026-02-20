@@ -451,17 +451,19 @@ p {
 }
 
 .hero__badge {
-  display: inline-block;
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.18em;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
   text-transform: uppercase;
   color: var(--clr-accent);
-  background: var(--clr-sage);
-  padding: 5px 16px;
+  background: transparent;
+  padding: 6px 18px;
   border-radius: var(--radius-full);
   margin-bottom: var(--sp-xl);
-  border: 1px solid rgba(58, 125, 92, 0.1);
+  border: 1.5px solid var(--clr-accent);
 }
 
 .hero h1 {
@@ -470,21 +472,57 @@ p {
   letter-spacing: -0.035em;
 }
 
+.hero h1 em {
+  color: var(--clr-accent);
+  font-style: italic;
+  font-weight: 600;
+}
+
 .hero__sub {
   font-size: var(--fs-lg);
   color: var(--clr-muted);
-  margin-bottom: var(--sp-md);
+  margin-bottom: var(--sp-xl);
   line-height: 1.8;
   letter-spacing: 0.015em;
-  max-width: 560px;
+  max-width: 540px;
 }
 
-.hero__sub--small {
-  font-size: var(--fs-base);
-  color: var(--clr-muted);
-  margin-bottom: var(--sp-lg);
-  font-style: italic;
-  opacity: 0.85;
+/* ---------- Hero Stats ---------- */
+.hero__stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--sp-lg);
+  margin-top: var(--sp-2xl);
+}
+
+.hero__stat {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 8px 16px;
+  background: var(--clr-white);
+  border-radius: var(--radius-full);
+  box-shadow: 0 2px 8px rgba(43, 92, 74, 0.06);
+  border: 1px solid rgba(43, 92, 74, 0.06);
+  transition: all 0.3s var(--ease-out);
+}
+
+.hero__stat:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(43, 92, 74, 0.1);
+}
+
+.hero__stat-icon {
+  font-size: 1.1rem;
+  line-height: 1;
+}
+
+.hero__stat-label {
+  font-family: var(--ff-body);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--clr-primary-dark);
+  letter-spacing: 0.02em;
 }
 
 .hero__image {
@@ -505,6 +543,59 @@ p {
   height: auto;
   display: block;
   object-fit: cover;
+}
+
+/* ---------- Floating Image Badge ---------- */
+.hero__image-badge {
+  position: absolute;
+  bottom: var(--sp-lg);
+  left: var(--sp-lg);
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 10px 18px;
+  border-radius: var(--radius-md);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.hero__image-badge-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  background: var(--clr-sage);
+  border-radius: 50%;
+  color: var(--clr-accent);
+  flex-shrink: 0;
+}
+
+.hero__image-badge-icon svg {
+  width: 18px;
+  height: 18px;
+}
+
+.hero__image-badge-title {
+  font-family: var(--ff-heading);
+  font-size: var(--fs-base);
+  font-weight: 600;
+  color: var(--clr-primary-dark);
+  display: block;
+  line-height: 1.2;
+}
+
+.hero__image-badge-sub {
+  font-family: var(--ff-body);
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--clr-muted);
+  display: block;
 }
 
 /* ---------- Section Images ---------- */
