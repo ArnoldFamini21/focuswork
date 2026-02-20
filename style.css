@@ -143,19 +143,7 @@ ul {
   color: var(--clr-white);
 }
 
-/* Subtle decorative divider between sections */
-.section--alt::before,
-.section--cream::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 60px;
-  height: 3px;
-  background: var(--clr-sage-dark);
-  border-radius: var(--radius-full);
-}
+/* Decorative section dividers removed — h2 accent underlines serve this purpose now */
 
 /* ---------- Typography ---------- */
 h1,
@@ -185,8 +173,10 @@ h2 {
   font-size: var(--fs-3xl);
   margin-bottom: var(--sp-lg);
   letter-spacing: -0.02em;
-  position: relative;
-  display: inline-block;
+}
+
+.section-header h2 {
+  padding-bottom: var(--sp-xs);
 }
 
 .section-header h2::after {
@@ -1316,10 +1306,7 @@ p {
     padding: var(--sp-3xl) 0;
   }
 
-  .section--alt::before,
-  .section--cream::before {
-    width: 40px;
-  }
+
 
   h1 {
     font-size: var(--fs-3xl);
