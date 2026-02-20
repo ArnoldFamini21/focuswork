@@ -122,8 +122,13 @@ ul {
 }
 
 .section {
-  padding: var(--sp-5xl) 0;
+  padding: var(--sp-4xl) 0;
   position: relative;
+}
+
+/* Reduce gap between consecutive sections */
+.section+.section {
+  padding-top: var(--sp-3xl);
 }
 
 .section--cream {
@@ -230,7 +235,7 @@ p {
   background: var(--clr-sage);
   padding: 5px 14px;
   border-radius: var(--radius-full);
-  margin-bottom: var(--sp-lg);
+  margin-bottom: var(--sp-md);
   border: 1px solid rgba(58, 125, 92, 0.1);
 }
 
@@ -242,7 +247,7 @@ p {
 
 .section-header {
   text-align: center;
-  margin-bottom: var(--sp-3xl);
+  margin-bottom: var(--sp-xl);
 }
 
 .section-intro {
@@ -418,8 +423,8 @@ p {
 
 /* ---------- Hero ---------- */
 .hero {
-  padding-top: calc(var(--sp-5xl) + 60px);
-  padding-bottom: var(--sp-5xl);
+  padding-top: calc(var(--sp-4xl) + 60px);
+  padding-bottom: var(--sp-4xl);
   background: linear-gradient(165deg, var(--clr-sage) 0%, var(--clr-cream) 45%, var(--clr-cream) 100%);
   overflow: hidden;
   position: relative;
@@ -702,10 +707,10 @@ p {
 .callout-box {
   background: linear-gradient(135deg, var(--clr-primary-dark) 0%, var(--clr-primary) 100%);
   color: var(--clr-white);
-  padding: var(--sp-2xl) var(--sp-3xl);
+  padding: var(--sp-xl) var(--sp-2xl);
   border-radius: var(--radius-lg);
   text-align: center;
-  margin-top: var(--sp-2xl);
+  margin-top: var(--sp-lg);
   box-shadow: var(--shadow-lg);
   position: relative;
   overflow: hidden;
@@ -754,9 +759,21 @@ p {
   text-align: center;
 }
 
+.story-content p+p {
+  margin-top: var(--sp-md);
+}
+
+.story-content p+.callout-box {
+  margin-top: var(--sp-xl);
+}
+
+.story-content .callout-box+p {
+  margin-top: var(--sp-xl);
+}
+
 .story-content p {
   font-size: var(--fs-lg);
-  line-height: 1.9;
+  line-height: 1.75;
   color: var(--clr-muted);
   letter-spacing: 0.015em;
 }
@@ -829,7 +846,7 @@ p {
 
 /* ---------- Coaching Helps ---------- */
 .coaching-helps {
-  padding: var(--sp-4xl) 0;
+  padding: var(--sp-3xl) 0;
 }
 
 /* ---------- Funding Section ---------- */
@@ -1177,7 +1194,7 @@ p {
 /* ---------- Final CTA ---------- */
 .final-cta {
   text-align: center;
-  padding: var(--sp-5xl) 0;
+  padding: var(--sp-4xl) 0;
 }
 
 .final-cta h2 {
@@ -1394,7 +1411,7 @@ p {
 /* Mobile adjustments */
 @media (max-width: 639px) {
   .section {
-    padding: var(--sp-3xl) 0;
+    padding: var(--sp-2xl) 0;
   }
 
 
@@ -1412,8 +1429,8 @@ p {
   }
 
   .hero {
-    padding-top: calc(var(--sp-3xl) + 60px);
-    padding-bottom: var(--sp-3xl);
+    padding-top: calc(var(--sp-2xl) + 60px);
+    padding-bottom: var(--sp-2xl);
   }
 
   .hero__image {
@@ -1466,11 +1483,11 @@ p {
   }
 
   .section-header {
-    margin-bottom: var(--sp-xl);
+    margin-bottom: var(--sp-lg);
   }
 
   .final-cta {
-    padding: var(--sp-4xl) 0;
+    padding: var(--sp-3xl) 0;
   }
 
   .final-cta h2 {
