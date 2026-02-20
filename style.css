@@ -1270,9 +1270,28 @@ p {
   margin: var(--sp-sm) 0;
 }
 
+.footer__bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: var(--sp-sm);
+}
+
 .footer__copy {
   font-size: var(--fs-xs);
   color: rgba(255, 255, 255, 0.4);
+  margin: 0;
+}
+
+.footer__privacy-link {
+  font-size: var(--fs-xs);
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.3s var(--ease-out);
+}
+
+.footer__privacy-link:hover {
+  color: rgba(255, 255, 255, 0.8);
 }
 
 /* ---------- Animations ---------- */
