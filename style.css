@@ -1429,8 +1429,9 @@ p {
 }
 
 .support-nav__card h3 {
-  font-size: var(--fs-xl);
-  color: var(--clr-primary-dark);
+  font-size: var(--fs-2xl);
+  color: var(--clr-primary);
+  font-weight: 800;
   margin-bottom: 0;
   line-height: 1.3;
 }
