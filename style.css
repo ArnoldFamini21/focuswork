@@ -473,14 +473,17 @@ p {
 
 .hero h1 {
   margin-bottom: var(--sp-lg);
-  line-height: 1.05;
-  letter-spacing: -0.035em;
+  line-height: 1.08;
+  letter-spacing: -0.03em;
 }
 
 .hero h1 em {
-  color: var(--clr-accent);
-  font-style: italic;
-  font-weight: 600;
+  font-style: normal;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--clr-primary) 0%, var(--clr-accent) 60%, #5ab88a 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero__sub {
