@@ -1573,13 +1573,79 @@ p {
   margin-top: 2px;
 }
 
-/* Visual accent card for detail sections */
+/* Visual area for detail sections */
 .support-detail__visual {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
+/* New full-width image card */
+.support-detail__img-card {
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 480px;
+  position: relative;
+}
+
+.support-detail__img-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.6s var(--ease-out);
+}
+
+.support-detail__img-card:hover img {
+  transform: scale(1.04);
+}
+
+/* "Who it's for" callout */
+.support-detail__who {
+  font-size: var(--fs-base);
+  color: var(--clr-body);
+  background: var(--clr-sage);
+  border-left: 3px solid var(--clr-accent);
+  padding: var(--sp-sm) var(--sp-lg);
+  border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+  margin-bottom: var(--sp-lg);
+  line-height: 1.65;
+}
+
+.support-detail__who strong {
+  color: var(--clr-primary-dark);
+}
+
+/* Note callout */
+.support-detail__note {
+  font-size: var(--fs-sm);
+  color: var(--clr-accent);
+  font-weight: 600;
+  background: rgba(58, 125, 92, 0.06);
+  border: 1px solid rgba(58, 125, 92, 0.12);
+  padding: var(--sp-sm) var(--sp-lg);
+  border-radius: var(--radius-sm);
+  margin-bottom: var(--sp-md);
+  line-height: 1.6;
+}
+
+/* Subtle disclaimer paragraph */
+.support-detail__intro--subtle {
+  font-size: var(--fs-sm);
+  font-style: italic;
+  color: var(--clr-muted);
+  opacity: 0.85;
+}
+
+/* 2-column grid layout for long checklists */
+.support-detail__list--grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+/* Legacy accent card (kept for backward compat, cleaned up) */
 .support-detail__card-accent {
   background: linear-gradient(155deg, var(--clr-sage) 0%, rgba(232, 240, 232, 0.6) 100%);
   border: 1px solid rgba(43, 92, 74, 0.08);
@@ -1678,6 +1744,10 @@ p {
 
   .support-nav {
     grid-template-columns: repeat(2, 1fr);
+  }
+
+  .support-detail__list--grid {
+    grid-template-columns: 1fr 1fr;
   }
 }
 
@@ -1851,6 +1921,10 @@ p {
 
   .support-nav__card {
     padding: var(--sp-lg);
+  }
+
+  .support-detail__img-card {
+    max-width: none;
   }
 
   .support-detail__card-accent {
